@@ -1,0 +1,28 @@
+<div class="game-container">
+  <div class="logo-container">
+    <h2> JEU DE COULEURS</h2>
+    <h5> Veulliez clicker sur intialiser  </h5>
+     <div class="selected-color left" [ngClass]="{'rouge': currentColor === 'rouge', 'bleu': currentColor === 'bleu', 'vert': currentColor === 'vert', 'noir': currentColor === 'noir', 'jaune': currentColor === 'jaune'}"></div>
+    <div class="selected-color left" [ngClass]="{'rouge': currentColor === 'rouge', 'bleu': currentColor === 'bleu', 'vert': currentColor === 'vert', 'noir': currentColor === 'noir', 'jaune': currentColor === 'jaune'}"></div>
+    <div class="selected-color right" [ngClass]="{'rouge': currentColor === 'rouge', 'bleu': currentColor === 'bleu', 'vert': currentColor === 'vert', 'noir': currentColor === 'noir', 'jaune': currentColor === 'jaune'}"></div>
+    <div class="selected-color right" [ngClass]="{'rouge': currentColor === 'rouge', 'bleu': currentColor === 'bleu', 'vert': currentColor === 'vert', 'noir': currentColor === 'noir', 'jaune': currentColor === 'jaune'}"></div>
+
+  </div>
+  
+  <div class="color-buttons">
+    <button *ngFor="let color of colors" (click)="selectedColor = color; checkColor()">{{ color }}</button>
+  </div>
+
+  <button class="init-button center" (click)="initializeGame()">Initialiser</button>
+
+  <div *ngIf="showResult" class="result-message">
+    <p *ngIf="resultColor === 'green'" [ngStyle]="{ color: 'green' }">Correcte!</p>
+    <p *ngIf="resultColor === 'red'" [ngStyle]="{ color: 'red' }">Incorrecte!</p>
+  </div>
+
+  <p *ngIf="attempts === 5" class="score-message">
+    <span class="note-text">Note:</span><span class="note-text">{{ score }}/20 </span> 
+    <span *ngIf="score === 20">😊 BravOooo!</span>
+    <span *ngIf="score !== 20">😕 Essaye d'apprendre !</span>
+  </p>
+</div>

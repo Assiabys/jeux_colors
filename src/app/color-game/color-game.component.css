@@ -1,0 +1,148 @@
+.selected-color.rouge { background-color: #FF0000; } /* Red */
+.selected-color.bleu { background-color: #0000FF; } /* Blue */
+.selected-color.vert { background-color: #00FF00; } /* Green */
+.selected-color.noir { background-color: #000000; } /* Black */
+.selected-color.jaune { background-color: yellow; } /* Black */
+
+
+.selected-color {   width: 50px; /* Desired width */  height: 50px; /* Desired height */  border: 1px solid #000; /* Optional border */  margin-bottom: 10px; /* Optional margin */  }
+
+
+
+.game-container {
+    background-color: #9BB8CD; /* Light background color */
+    padding: 70px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center the contents horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Set minimum height to 100% of viewport height */
+  }
+  
+  /* Header styling */
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-container h2 {
+    color: #333; /* Dark text color */
+    font-size: 24px; /* Font size */
+    margin-bottom: 20px; /* Spacing */
+  }
+  
+  /* Selected color styling */
+/* Add or modify these styles in your existing CSS file */
+
+/* Selected color styling */
+.selected-color {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    border-radius: 50%;
+  }
+  
+ 
+  .selected-color.left {
+    margin-right: 0; /* Remove right margin for the left one */
+  }
+  
+  .selected-color.right {
+    margin-left: 0; /* Remove left margin for the right one */
+  }
+  
+  /* Color buttons styling */
+  .color-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Spacing from color buttons to selected colors */
+  }
+  
+  button {
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Initialize button styling */
+  .init-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Spacing from color buttons to initialize button */
+  }
+  
+  .init-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Result message styling */
+  .result-message {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .result-message p {
+    font-size: 24px; /* Font size */
+    font-weight: bold;
+    margin: 10px 0; /* Spacing */
+  }
+  
+  .result-message .green {
+    color: green;
+  }
+  
+  .result-message .red {
+    color: red;
+  }
+  .center {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px
+  }
+  
+  /* Score message styling */
+  .score-message {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .score-message p {
+    font-size: 21px;
+    font-weight:lighter;
+    margin: 20px 0;
+  }
+  
+  .score-message span {
+    font-size: 21px;
+    margin-left: 10px;
+    display: inline-block;
+    animation: bounce 1s infinite; /* Optional animation */
+  }
+  
+  /* Optional: Add a subtle animation to the emojis */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
